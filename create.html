@@ -106,6 +106,7 @@
 
       </style>
 
+<!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
           <a class="navbar-brand" href="homepage.html">
@@ -132,33 +133,47 @@
           </div>
         </div>
       </nav>
+
+      <!-- Task Creation -->
       <div class="container mt-5">
         <div class="task-dashboard-heading rounded p-3 text-white">
           <h1 class="display-4">Create a Task</h1>
         </div>
         <div class="row mt-4">
           <div class="col-md-8 offset-md-2">
-            <form>
+            <form action="/action_page.php" class="was-validated">
               <div class="mb-3">
                 <label for="taskName" class="form-label">Task Name</label>
                 <input type="text" class="form-control" id="taskName" placeholder="Enter task name" required>
+
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please provide a task name.
+                  </div>
               </div>
               <div class="mb-3">
                 <label for="taskDescription" class="form-label">Task Description</label>
-                <textarea class="form-control" id="taskDescription" rows="4" placeholder="Enter task description"></textarea>
+                <textarea class="form-control" id="taskDescription" rows="4" placeholder="Enter task description" required></textarea>
+
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please provide a task description.
+                  </div>
               </div>
               <div class="mb-3">
                 <label for="dueDate" class="form-label">Due Date</label>
                 <input type="date" class="form-control" id="dueDate" required>
-              </div>
-              <div class="mb-3">
-                <label for="priority" class="form-label">Priority</label>
-                <select class="form-select" id="priority" required>
-                  <option selected>Select priority level</option>
-                  <option value="1">Low</option>
-                  <option value="2">Medium</option>
-                  <option value="3">High</option>
-                </select>
+
+                <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please provide a due date.
+                  </div>
               </div>
               <button type="submit" class="btn btn-primary">Create Task</button>
             </form>
